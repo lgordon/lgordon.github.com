@@ -1,0 +1,31 @@
+/*
+-----------------------------------------------
+Wikka Default Stylesheet (print)
+----------------------------------------------- */
+
+#header, #footer, #commentsheader, .copyright, .smallprint, .lastedit, .grabcode, .menu { display:none; }
+
+body {
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+ 	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#content {
+	border: none;	
+}
+
+#page {
+	background-color: #CDCDCD;
+	padding: 0px;
+	border: none;
+}
+
+#page:after {
+	float: right;
+	content: "lylegordon.ca";
+	color: #999;
+	font-size: .8em;
+	font-family: Arial, sans-serif;
+}
