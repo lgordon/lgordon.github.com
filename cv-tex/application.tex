@@ -4,33 +4,15 @@
 % DOCUMENT LAYOUT
 \documentclass[10pt, letterpaper]{article} 
 \usepackage{geometry} 
+%\geometry{letterpaper, hmargin=1in, vmargin=0.7in, marginparsep=7pt, marginparwidth=.6in}
+%updated geometry for resume
 \geometry{letterpaper, hmargin=1.5in, vmargin=1in, marginparsep=7pt, marginparwidth=.6in}
 \usepackage[defaultlines=2, all]{nowidow} 
-%\linespread{1.5} % double spaced for review
+%\pagestyle{empty} %no page numbers
 
 % SYMBOLS (telephone and envelope)
 \usepackage{marvosym}
-
-% GRAPHICS+FIGURES+CAPTIONS
-%\usepackage{graphicx}
-%\usepackage{float}
-\usepackage[small, bf, hypcap=true]{caption}
-%\graphicspath{{./}{Figures/}{Figures/Converted/}{Figures/Other/}}
-%\graphicspath{{./}{Figures/}{Figures/Solar/}{Figures/Other/}}
-%\DeclareGraphicsExtensions{.pdf, .png}
-%\DeclareGraphicsRule{.ai.pdf}{pdf}{.ai.pdf}{#1}
-%\DeclareGraphicsRule{.ai}{eps}{.ai}{#1}
-%\DeclareGraphicsRule{.ai}{pdf}{.pdf}{ps2pdf14 #1}
-%\DeclareGraphicsRule{.ai.pdf}{pdf}{.ai.pdf}{#1}
-%\DeclareGraphicsRule{.ai}{QTm}{QTm}{#1}
-%\DeclareGraphicsRule{.ai}{pdf}{.pdf}{`ps2pdf14 #1 `dirname #1`/`basename #1 .ai`-ai-converted-to.pdf}
-%\DeclareGraphicsRule{.ai}{pdf}{.pdf}{ps2pdf14 \SourceFile.\SourceExt \OutputFile}
-% RESET THE FIGURE NUMBERING COUNTER FOR EACH SECTION (doesn't work for section*, see next command)
-%\makeatletter
-%     \@addtoreset{figure}{section}
-%\makeatother
-% increment section number and create a new reference section
-%\newcommand{\unnumsec}[1]{\newrefsection\refstepcounter{section}\section*{#1}}
+\usepackage{xfrac}
 
 % FONTS
 \usepackage{fontspec}
@@ -46,6 +28,7 @@
 % CUSTOM COMMANDS
 \newcommand{\urllink}[1]{\href{#1}{\scriptsize\textsc{[url]}}}
 \newcommand{\pdflink}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doilink}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
 % MARGIN YEARS
 \usepackage{marginnote}
 \newcommand{\years}[1]{\mbox{}\marginnote{\footnotesize #1}}
@@ -57,8 +40,6 @@
 \newunicodechar{–}{\unskip~--\space\ignorespaces}
 \newunicodechar{—}{\unskip~---\space\ignorespaces}
 % AMPERSAND
-%\chardef\&="E050 %for linux libertine
-%\chardef\&="0026 %for minion pro
 \newfontfamily{\libertine}{Linux Libertine O}
 %use the nice linux libertine ampersand!
 \renewcommand{\&}{\libertine\char"E050 } %the space is important! 
@@ -68,15 +49,20 @@
 \sectionfont{\mdseries\upshape\Large}
 \subsectionfont{\mdseries\scshape\normalsize} 
 \subsubsectionfont{\mdseries\upshape\large} 
+%change spacing for resume
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{0.3cm}{0.1cm}
 
 % PDF SETUP
-\title{Faculty Application Package}
+%\title{Curriculum Vitae}
+\title{Resume}
 \author{Lyle M. Gordon}
 \usepackage{hyperxmp}
 \usepackage[unicode, bookmarks, colorlinks, breaklinks]{hyperref}  
 \hypersetup{linkcolor=Blue, citecolor=Blue, filecolor=black, urlcolor=Blue} 
 \hypersetup{
-	pdftitle={Curriculum Vitae},
+	%pdftitle={Curriculum Vitae},
+	pdftitle={Resume},
 	pdfauthor={Lyle M. Gordon},
 	pdfcopyright={Copyright © 2012 by Lyle Gordon. All rights reserved.},
 	%pdfcreator={XeLaTeX}
@@ -87,6 +73,8 @@
 \renewcommand*{\theHfigure}{\arabic{section}.\arabic{figure}} 
 
 \setlength\parindent{0pt}
+\setlength\parskip{0.1cm}
 \include{cv}
+%\include{resume}
 
 \end{document}
