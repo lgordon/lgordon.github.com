@@ -40,9 +40,9 @@
 \newunicodechar{–}{\unskip~--\space\ignorespaces}
 \newunicodechar{—}{\unskip~---\space\ignorespaces}
 % AMPERSAND
-\newfontfamily{\libertine}{Linux Libertine O}
+%\newfontfamily{\libertine}{Linux Libertine O}
 %use the nice linux libertine ampersand!
-\renewcommand{\&}{\libertine\char"E050 } %the space is important! 
+%\renewcommand{\&}{\libertine\char"E050 } %the space is important! 
 
 % HEADINGS
 \usepackage{sectsty} 
@@ -51,7 +51,7 @@
 \subsubsectionfont{\mdseries\upshape\large} 
 %change spacing for resume
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{0.3cm}{0.1cm}
+\titlespacing{\section}{0pt}{0.1cm}{0.05cm}
 
 % PDF SETUP
 %\title{Curriculum Vitae}
@@ -64,7 +64,7 @@
 	%pdftitle={Curriculum Vitae},
 	pdftitle={Resume},
 	pdfauthor={Lyle M. Gordon},
-	pdfcopyright={Copyright © 2012 by Lyle Gordon. All rights reserved.},
+	pdfcopyright={Copyright © 2018 by Lyle Gordon. All rights reserved.},
 	%pdfcreator={XeLaTeX}
 }
 
@@ -74,7 +74,10 @@
 
 \setlength\parindent{0pt}
 \setlength\parskip{0.1cm}
+%\titlespacing{\section}{0pt}{5pt}{5pt}
+%\titlespacing{\subsection}{0pt}{15pt}{5pt}
 \include{cv}
+%\include{letter}
 %\include{resume}
 
 \end{document}
