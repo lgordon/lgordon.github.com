@@ -1,0 +1,82 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% DOCUMENT LAYOUT
+\documentclass[10pt, letterpaper]{article} 
+\usepackage{geometry} 
+%\geometry{letterpaper, hmargin=1in, vmargin=0.7in, marginparsep=7pt, marginparwidth=.6in}
+%updated geometry for resume
+\geometry{letterpaper, lmargin=1.4in, rmargin=1.2in, tmargin=0.85in, bmargin=1.2in, marginparsep=7pt, marginparwidth=.6in}
+\usepackage[defaultlines=2, all]{nowidow} 
+%\pagestyle{empty} %no page numbers
+
+% SYMBOLS (telephone and envelope)
+\usepackage{marvosym}
+\usepackage{xfrac}
+
+% FONTS
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={Common}, Numbers={OldStyle}, Mapping=tex-text}  
+\setromanfont{Ubuntu}
+%\setsansfont{Myriad Pro}
+\XeTeXprotrudechars=2
+\rpcode\font\XeTeXcharglyph\hyphenchar\font=250
+
+% COLORS
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% CUSTOM COMMANDS
+\newcommand{\urllink}[1]{\href{#1}{\scriptsize\textsc{[url]}}}
+\newcommand{\pdflink}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doilink}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\mbox{}\marginnote{\footnotesize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+% UNBREAKING DASHES
+\usepackage{newunicodechar}
+\newunicodechar{–}{\unskip~--\space\ignorespaces}
+\newunicodechar{—}{\unskip~---\space\ignorespaces}
+% AMPERSAND
+%\newfontfamily{\libertine}{Linux Libertine O}
+%use the nice linux libertine ampersand!
+%\renewcommand{\&}{\libertine\char"E050 } %the space is important! 
+
+% HEADINGS
+\usepackage{sectsty} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+%change spacing for resume
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{0.3cm}{0.1cm}
+
+% PDF SETUP
+%\title{Curriculum Vitae}
+\title{Resume}
+\author{Lyle M. Gordon}
+\usepackage{hyperxmp}
+\usepackage[unicode, bookmarks, colorlinks, breaklinks]{hyperref}  
+\hypersetup{linkcolor=Blue, citecolor=Blue, filecolor=black, urlcolor=Blue} 
+\hypersetup{
+	%pdftitle={Curriculum Vitae},
+	pdftitle={Resume},
+	pdfauthor={Lyle M. Gordon},
+	pdfcopyright={Copyright © 2021 by Lyle Gordon. All rights reserved.},
+	%pdfcreator={XeLaTeX}
+}
+
+% DOCUMENT
+\begin{document}
+\renewcommand*{\theHfigure}{\arabic{section}.\arabic{figure}} 
+
+\setlength\parindent{0pt}
+\setlength\parskip{0.1cm}
+%\titlespacing{\section}{0pt}{5pt}{5pt}
+%\titlespacing{\subsection}{0pt}{15pt}{5pt}
+%\include{cv}
+\include{resume}
+
+\end{document}
